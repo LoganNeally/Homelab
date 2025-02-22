@@ -8,6 +8,8 @@ The entire project will be documented at https://loganneallyit.net
 
 
 This project all starts out with an old 2012 Mac Mini, that I wanted to convert into some sort of server. I had upgraded the ram to 16gb of DDR3 so i wanted to utilize that.
+Here is the current flowchart for this project:
+[[https://github.com/LoganNeally/SOAR-Automation-Project/blob/main/Shuffle%20Workflow.png]]
 
 I started out with installing Ubuntu 24.04 onto a bootable drive.
 After Ubuntu was all setup and updated, I got to installing TheHive. Listed below:
