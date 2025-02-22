@@ -11,7 +11,8 @@ This project all starts out with an old 2012 Mac Mini, that I wanted to convert 
 Here is the current flowchart for this project:
 
 
-![SOC Automation Project.drawio.png](https://github.com/LoganNeally/SOAR-Automation-Project/commit/ef1f8a65c9c379ae33a8c0004cde6101e93bae03)
+![image](https://github.com/user-attachments/assets/7b1b8deb-b668-4889-bffb-e1b1b8e99839)
+
 
 
 I started out with installing Ubuntu 24.04 onto a bootable drive.
@@ -112,15 +113,26 @@ If they are not working it may be due to the urls not matching up or a configura
 
 I switched back over to my VirtualBox and set up Telemetry and Mimikatz.
 
+![image](https://github.com/user-attachments/assets/1268d28b-3d9f-4b44-91e9-efd61fb7df4e)
+
 Now, when creating a rule for Wazuh, you can go to /wazuh-docker/single-node/config/wazuh_cluster
 The wazuh_manager.conf will be there. Do not attempt to enter the Docker Container as any changes you make will not be persistent. 
+
+![image](https://github.com/user-attachments/assets/3a8db6e5-5012-4153-9df7-e37acb6c6614)
 
 You can also use the dashboard and navigate to the server management tab on the left side of you screen and press settings.
 There will be an edit configuration button on the top right side of the menu. Any edits you save in that will save. 
 That's where I added the archive configuration and the shuffle webhook configuration (More on that later)
-I preferred using the dashboard.
+
+
 
 # Shuffle
+
+After setting up the webhook with Wazuh, I moved onto creating a Regex script to filter out the hash id of the Virtual Machine. I then setup VirusTotal to scan for mimikatz
+
+![image](https://github.com/user-attachments/assets/c0d23891-6437-4c7c-8f6a-3803f813a5c5)
+
+
 After that was all squared away, you can now move onto shuffle. Just follow MyDFIR's video.
 If you are having issues with TheHive, make sure you port forward port 9000 and use your machine's PUBLIC IP not the local, ie: 192.168.1.1 it will not work.
 If you are hosting locally and want to see your public address, run:
@@ -130,15 +142,19 @@ curl ifconfig.me
 the URL should be in the http://1.1.1.1:9000 format. The API Key is pretty straightforward. 
 When setting up the TheHive, use the advanced options and the JSON format. I ran into no issues this way.
 
+![image](https://github.com/user-attachments/assets/8ddb15f1-d501-44e4-a3bd-40426a466b5d)
 
 
 For setting up the email section, you can follow the video or use your personal. 
 I used my personal and followed the same example as I did with TheHive
 
+![image](https://github.com/user-attachments/assets/f8b9ef43-4644-4203-81ce-ab0b54166f3f)
 
 
 You can continue to follow the video, I stopped to look into Shuffle automation and what I can do with it.
 
+Here is the completed workflow:
+![image](https://github.com/user-attachments/assets/d423a8b4-77cb-424d-b2ad-339f87ae2535)
 
 # Resources:
 https://wazuh.com/
