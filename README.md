@@ -118,8 +118,9 @@ After that was all squared away, you can now move onto shuffle. Just follow MyDF
 If you are having issues with TheHive, make sure you port forward port 9000 and use your machine's PUBLIC IP not the local, ie: 192.168.1.1 it will not work.
 If you are hosting locally and want to see your public address, run:
 ```bash
-the URl should be in the http://1.1.1.1:9000 format. The API Key is pretty straightforward. 
+curl ifconfig.me
 ```
+the URl should be in the http://1.1.1.1:9000 format. The API Key is pretty straightforward. 
 When setting up the TheHive, use the advanced options and the JSON format. I ran into no issues this way.
 
 
