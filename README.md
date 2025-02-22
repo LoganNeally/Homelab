@@ -75,7 +75,7 @@ chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 ## Yay!! We have Docker!
-
+# Wazuh
 Now we install Wazuh with Docker-Compose
 ```bash
 git clone https://github.com/wazuh/wazuh-docker.git -b v4.11.0
@@ -91,7 +91,7 @@ docker-compose up
 docker-compose up -d
 docker ps
 ```
-
+# Configuring
 I then configured TheHive and Wazuh to reflect the local ip address of my server.
 I also changed some ports around on Wazuh to avoid conflict with cassandra, elasticsearch, and thehive
 
@@ -113,6 +113,7 @@ There will be an edit configuration button on the top right side of the menu. An
 That's where I added the archive configuration and the shuffle webhook configuration (More on that later)
 I preferred using the dashboard.
 
+# Shuffle
 After that was all squared away, you can now move onto shuffle. Just follow MyDFIR's video.
 If you are having issues with TheHive, make sure you port forward port 9000 and use your machine's PUBLIC IP not the local, ie: 192.168.1.1 it will not work.
 the URl should be in the http://1.1.1.1:9000 format. The API Key is pretty straightforward. 
