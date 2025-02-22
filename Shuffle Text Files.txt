@@ -1,0 +1,60 @@
+Webhook 1:
+	Wazuh Webhook in Conf. file.
+
+
+SHA256 RegEx:
+	Signals out and removes the Hash:
+		$exec.all_fields.data.win.eventdata.hashes
+
+	For Regex
+		SHA256=([a-fA-F0-9]{64})
+Virus Total:
+	Set to get hash report
+	Id is $sha256_regex.group_0.# to get the mimikatz detection
+
+TheHive:
+	JSON File
+	{
+  	"description": "Mimikats Detected on host: $exec.all_fields.data.win.system.computer",
+  	"flag": false,
+  	"pap": 2,
+  	"time": "$exec.all_fields.data.win.eventdata.utcTime",
+  	"title": "$exec.title",
+  	"host": "$exec.all_fields.data.win.eventdata.user",
+  	"severity": 2,
+  	"source": "Wazuh",
+  	"sourceRef": "Rule 100003",
+  	"summary": "Mimikatz detected on host: $exec.all_fields.data.win.system.computer ProcessID: $exec.all_fields.data.win.system.processID CommandLine: $exec.all_fields.data.win.eventdata.commandLine",
+  	"tags": ["T1003"],
+  	"tlp": 2,
+  	"type": "internal"
+	}
+
+Email:
+	Sends email report about mimikatz usage
+
+		{
+	  "message": {
+	    "subject": "$exec.title",
+	    "body": {
+	      "contentType": "",
+	      "content": "Mimikatz Usage detected at host: $exec.all_fields.data.win.system.computer from user: $exec.all_fields.data.win.eventdata.user at $exec.all_fields.data.win.eventdata.utcTime Corrective action will be sent via email once the alert has been reviewed"
+	    },
+	    "toRecipients": [
+	      {
+	        "emailAddress": {
+	          "address": "youremail@email.com"
+	        }
+	      }
+	    ]
+	  }
+	}
+
+
+
+
+
+
+
+
+
