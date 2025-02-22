@@ -104,36 +104,12 @@ the URl should be in the http://1.1.1.1:9000 format. The API Key is pretty strai
 
 When setting up the TheHive, use the advanced options and the JSON format. I ran into no issues this way.
 
-TheHive:
-	JSON File
-  	"description": "Mimikats Detected on host: $exec.all_fields.data.win.system.computer",
-  	"flag": false,
-  	"pap": 2,
-  	"time": "$exec.all_fields.data.win.eventdata.utcTime",
-  	"title": "$exec.title",
-  	"host": "$exec.all_fields.data.win.eventdata.user",
-  	"severity": 2,
-  	"source": "Wazuh",
-  	"sourceRef": "Rule 100003",
-  	"summary": "Mimikatz detected on host: $exec.all_fields.data.win.system.computer ProcessID: $exec.all_fields.data.win.system.processID CommandLine: $exec.all_fields.data.win.eventdata.commandLine",
-  	"tags": ["T1003"],
-  	"tlp": 2,
-  	"type": "internal"
 
 
 For setting up the email section, you can follow the video or use your personal. 
 I used my personal and followed the same example as I did with TheHive
 
-  "message": {
-	    "subject": "$exec.title",
-	    "body": {
-	      "contentType": "",
-	      "content": "Mimikatz Usage detected at host: $exec.all_fields.data.win.system.computer from user: $exec.all_fields.data.win.eventdata.user at $exec.all_fields.data.win.eventdata.utcTime Corrective action will be          sent via email once the alert has been reviewed"
-	    },
-	    "toRecipients": [
-	      {
-	        "emailAddress": {
-	          "address": "youremail@email.com"
+
 
 You can continue to follow the video, I stopped to look into Shuffle automation and what I can do with it.
 
