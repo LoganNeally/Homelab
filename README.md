@@ -1,3 +1,6 @@
+# Welcome to my SOC Automation Project!
+
+
 I have set up a SOAR homelab referencing MyDFIR's playlist on youtube. 
 This is the link to the referenced series if you would like to check it out https://www.youtube.com/watch?v=Lb_ukgtYK_U
 
