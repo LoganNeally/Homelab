@@ -59,7 +59,7 @@ sudo apt-get install -y thehive
 Default Credentials on port 9000
 credentials are 'admin@thehive.local' with a password of 'secret'
 
-
+# Docker
 After installing TheHive, I installed Docker and Docker-Compose
 following this guide, https://documentation.wazuh.com/current/deployment-options/docker/docker-installation.html
 ```bash
@@ -129,7 +129,7 @@ I used my personal and followed the same example as I did with TheHive
 You can continue to follow the video, I stopped to look into Shuffle automation and what I can do with it.
 
 
-#Resources:
+# Resources:
 https://wazuh.com/
 https://docs.strangebee.com/thehive/download/#docker
 https://www.virustotal.com/
