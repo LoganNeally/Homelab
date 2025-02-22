@@ -120,7 +120,7 @@ If you are hosting locally and want to see your public address, run:
 ```bash
 curl ifconfig.me
 ```
-the URl should be in the http://1.1.1.1:9000 format. The API Key is pretty straightforward. 
+the URL should be in the http://1.1.1.1:9000 format. The API Key is pretty straightforward. 
 When setting up the TheHive, use the advanced options and the JSON format. I ran into no issues this way.
 
 
