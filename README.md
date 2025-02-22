@@ -80,8 +80,9 @@ Now we install Wazuh with Docker-Compose
 ```bash
 git clone https://github.com/wazuh/wazuh-docker.git -b v4.11.0
 cd wazuh-docker
-cd single-node (I did not do multi-node for this since this was only a demonstration)
+cd single-node 
 ```
+(I did not do multi-node for this since this was only a demonstration)
 (To Generate the SSL Certs)
 ```bash
 docker-compose -f generate-indexer-certs.yml run --rm generator 
