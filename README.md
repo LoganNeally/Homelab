@@ -74,7 +74,7 @@ curl -L "https://github.com/docker/compose/releases/download/v2.12.2/docker-comp
 chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
-Yay!! We have Docker!
+##Yay!! We have Docker!
 
 Now we install Wazuh with Docker-Compose
 ```bash
@@ -129,7 +129,7 @@ I used my personal and followed the same example as I did with TheHive
 You can continue to follow the video, I stopped to look into Shuffle automation and what I can do with it.
 
 
-Resources:
+#Resources:
 https://wazuh.com/
 https://docs.strangebee.com/thehive/download/#docker
 https://www.virustotal.com/
