@@ -1,4 +1,4 @@
-# Welcome to my SOC Automation Project!
+# Welcome to my SOAR Automation Project!
 
 
 I set up a SOAR homelab referencing MyDFIR's playlist on youtube. 
