@@ -74,7 +74,7 @@ curl -L "https://github.com/docker/compose/releases/download/v2.12.2/docker-comp
 chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
-##Yay!! We have Docker!
+## Yay!! We have Docker!
 
 Now we install Wazuh with Docker-Compose
 ```bash
