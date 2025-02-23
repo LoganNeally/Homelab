@@ -158,8 +158,13 @@ Here is the completed workflow:
 
 # Resources:
 https://wazuh.com/
+
 https://docs.strangebee.com/thehive/download/#docker
+
 https://www.virustotal.com/
+
 https://shuffler.io/
+
 https://github.com/MyDFIR/SOC-Automation-Project/tree/main
+
 
